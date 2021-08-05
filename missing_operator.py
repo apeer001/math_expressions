@@ -70,6 +70,15 @@ def missing_operator(e):
             vvec.append(newvec)
         j += 1
 
+    # check for values with more than one decimal
+    for val in vvec:
+        count = 0
+        for v in val:
+            if "." == v:
+                count += 1
+        if count > 1:
+            return True                            # Found Value with too many decimals (invalid)
+
     # Compare number of inputs to supplied operators found
     if len(vvec) != len(ovec) + 1:
         # print("Missing operator")
