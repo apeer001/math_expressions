@@ -5,15 +5,11 @@ OPR = {
 }
 
 NUM = {
-    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.'
 }
 
 LET = {
     'A', 'B', 'C', 'D', 'E', 'F'
-}
-
-DOT = {
-    '.'
 }
 
 BRC = {
@@ -76,7 +72,7 @@ def missing_operator(e):
 
     # Compare number of inputs to supplied operators found
     if len(vvec) != len(ovec) + 1:
-        print("Missing operator")
+        # print("Missing operator")
         return True
     return False
 
@@ -84,7 +80,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) >= 2:
         expression = sys.argv[1]
-        print(expression)
         print(missing_operator(expression))
     else:
         print("Missing expression as input")
