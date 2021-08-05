@@ -22,7 +22,7 @@ def missing_operator(e):
         return True
 
     # operator without num/variables
-    if e[0] == OPR or len(e) == 1:
+    if e[0] in OPR or len(e) == 1:
         return True
 
     # Value Vector
